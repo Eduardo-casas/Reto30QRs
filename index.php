@@ -61,13 +61,13 @@ if($method == "OPTIONS") {
 </head>
 <body>
   <script>
-    const AS_URL_BASE = "https://script.google.com/macros/s/AKfycbybzRtGgZnTg3NAjanYlFAMhZA0va2FZ6mnTQKwQgnpf2cAc-89RA36d6iv8ySwNGq4ZA/exec";
+    const AS_URL_BASE = "https://docs.google.com/forms/d/e/1FAIpQLSeC2lwJOTkJXrpsmKt0urpY8UDGWfgOnTbbaK69_30d-pBRgw/viewform?usp=pp_url&entry.255920692=";
     
     var url = document.location.href;
     var k = url.substr(url.lastIndexOf("k=")+2);
     
     if(k){
-      fetch(AS_URL_BASE+'?k='+k)
+      fetch(AS_URL_BASE+k)
       .then(r => r.text())
       .then((r) => {
         console.log(r);
